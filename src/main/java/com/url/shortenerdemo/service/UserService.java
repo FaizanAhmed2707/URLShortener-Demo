@@ -6,6 +6,7 @@ import com.url.shortenerdemo.repository.UserRepository;
 import com.url.shortenerdemo.security.jwt.JwtAuthenticationResponse;
 import com.url.shortenerdemo.security.jwt.JwtUtils;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -17,10 +18,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UserService {
-    private PasswordEncoder passwordEncoder;
-    private UserRepository userRepository;
-    private AuthenticationManager authenticationManager;
-    private JwtUtils jwtUtils;
+    private final PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final AuthenticationManager authenticationManager;
+    private final JwtUtils jwtUtils;
 
     public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
