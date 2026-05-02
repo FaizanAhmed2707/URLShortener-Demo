@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RedirectController {
 
-    private UrlMappingService urlMappingService;
+    private final UrlMappingService urlMappingService;
 
     @GetMapping("/{shortUrl}")
     public ResponseEntity<Void> redirect(@PathVariable String shortUrl) {
