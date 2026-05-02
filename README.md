@@ -78,6 +78,3 @@ This API is configured for deployment on Azure App Service.
 
 ---
 **Author:** Syed Faizan Ahmed
-
-Ask for the frontend README when you are ready.
-```
