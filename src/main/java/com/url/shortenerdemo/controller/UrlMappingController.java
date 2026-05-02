@@ -47,6 +47,7 @@ public class UrlMappingController {
             }
         }
 
+        String username = (principal != null) ? principal.getName() : "Anonymous";
         UrlMappingDTO urlMappingDTO = urlMappingService.createShortUrl(originalUrl, user);
         return ResponseEntity.ok(urlMappingDTO);
     }

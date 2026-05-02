@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class UrlMappingService {
 
-    private UrlMappingRepository urlMappingRepository;
-    private ClickEventRepository clickEventRepository;
+    private final UrlMappingRepository urlMappingRepository;
+    private final ClickEventRepository clickEventRepository;
 
     public UrlMappingDTO createShortUrl(String originalUrl, User user) {
         String shortUrl = generateShortUrl();
