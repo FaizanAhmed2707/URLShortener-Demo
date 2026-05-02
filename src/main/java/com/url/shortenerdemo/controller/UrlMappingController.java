@@ -21,8 +21,8 @@ import java.util.Map;
 @RequestMapping("/api/urls")
 @RequiredArgsConstructor
 public class UrlMappingController {
-    private UrlMappingService urlMappingService;
-    private UserService userService;
+    private final UrlMappingService urlMappingService;
+    private final UserService userService;
 
     @PostMapping("/shorten")
     // NOTE: Removed @PreAuthorize to allow anonymous access (as per WebSecurityConfig)
